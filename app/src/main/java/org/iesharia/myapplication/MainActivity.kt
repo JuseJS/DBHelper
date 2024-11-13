@@ -108,7 +108,7 @@ fun MainScreen(modifier: Modifier) {
             singleLine = true,
             shape = RoundedCornerShape(10.dp)
         )
-        val bModifier: Modifier = Modifier.padding(20.dp)
+        val bModifier: Modifier = Modifier.padding(10.dp)
         Row {
             Button(
                 modifier = bModifier,
@@ -175,6 +175,17 @@ fun MainScreen(modifier: Modifier) {
                     }
                 ) {
                     Text(text = "Eliminar")
+                }
+                Button(
+                    modifier = bModifier,
+                    onClick = {
+                        nameValue = ""
+                        ageValue = ""
+                        isEditMode = false
+                        selectedPersonaId = null
+                    }
+                ) {
+                    Text(text = "Cancelar")
                 }
             }
         }
